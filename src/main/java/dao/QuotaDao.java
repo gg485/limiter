@@ -18,7 +18,7 @@ public class QuotaDao {
     }
     public QuotaDao() throws SQLException {
         String url="jdbc:mysql://127.0.0.1:3306/quota?characterEncoding=UTF-8&serverTimezone=UTC";
-        c=DriverManager.getConnection(url,"root","gddsygy_12345");
+        c=DriverManager.getConnection(url,"user","password");
     }
     public ResourceCommon DBResource(String key) throws SQLException {
         String sql="SELECT capacity, refresh_interval, algo FROM resources WHERE name = ? AND state = 0";
